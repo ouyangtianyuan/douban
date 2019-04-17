@@ -1,0 +1,25 @@
+<!--pages/moviesList/index.wxml-->
+<import src='/pages/rating/index.wxml' />
+<template name='moviesList'>
+    <view class='list-wrap' bindtap='bindDetail' data-id='{{id}}'>
+      <view class='list-content'>
+          <view class='imgs'>
+           <image src='{{images.medium}}'></image>
+          </view>
+          <view class='text-box'>
+            <view class='title'>{{title}}</view>
+            <view class='allDir'>导演：{{allDir}}</view>
+            <view class='allCasts'>主演：{{allCasts}}</view>
+            <view class='genres'>类型：{{allGenres}}</view>
+            <view class='wish'>{{collect_count}}人想看</view>
+            <template is='rating' data='{{rating}}'></template>
+          </view>
+          <block wx:if="{{typeId=='inTh'}}">
+              <view class='rig-btn'><text>购票</text></view>
+          </block>
+          <block wx:if="{{typeId=='com'}}">
+              <view class='rig-btn'><text>想看</text></view>
+          </block>
+      </view>
+    </view>
+</template>

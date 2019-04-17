@@ -1,0 +1,34 @@
+<!--pages/index/index.wxml-->
+  <import src='/pages/grid/index.wxml' />
+<view class='container'>
+  <view class='search-page' bindtap='searchFn'>
+      <icon type='search' size='16' class='search-icon'></icon>
+      <text class='search-text'>搜索电影</text>
+  </view>
+  <view class='session-page'>
+    <view class='header'>
+      <text class='tit'>影院热映</text>
+      <text class='more' bindtap='bindToMore' data-type='inTh'>更多>></text>
+    </view>
+    <view class='content'>
+        <scroll-view scroll-x='true' class='scrolls'>
+            <block wx:for='{{inTh}}' wx:key='{{item}}'>
+              <template is='grid' data='{{...item}}'></template> 
+            </block>
+        </scroll-view>
+    </view>
+  </view>
+  <view class='session-page'>
+    <view class='header'>
+      <text class='tit'>即将上映</text>
+      <text class='more' bindtap='bindToMore' data-type='com'>更多>></text>
+    </view>
+    <view class='content'>
+        <scroll-view scroll-x='true' class='scrolls'>
+            <block wx:for='{{com}}' wx:key='{{item}}'>
+              <template is='grid' data='{{...item}}'></template> 
+            </block>
+        </scroll-view>
+    </view>
+  </view>
+</view>

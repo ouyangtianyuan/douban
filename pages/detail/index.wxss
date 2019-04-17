@@ -1,0 +1,144 @@
+/* pages/detail/index.wxss */
+@import '/pages/rating/index.wxss';
+page{
+  padding:0;
+}
+.header{
+  text-align:center;
+  max-height:400rpx;
+  overflow: hidden;
+}
+.header image{
+  width:100%;
+}
+.content{
+  background:#fff;
+  padding:30rpx;
+}
+.content .top{
+  display:flex;
+  flex-direction: row;
+  align-items: top;
+}
+.content .l-box{
+  flex: 1;
+}
+.content .l-box .t-text{
+    padding-right:20rpx;
+}
+.content .l-box .t-text veiw{
+  margin-bottom:10rpx;
+}
+.content .tit{
+  font-size:48rpx;
+  font-weight:700;
+  margin-bottom:20rpx; 
+}
+.content .r-box{
+  width:150rpx;
+  height:130rpx;
+  border:1px solid #8d8d8d;
+  position:relative;
+  top:3px;
+  border-radius:3px;
+  text-align:center;
+  padding:10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content .r-box .rat-num{
+  font-weight:700;
+}
+.content .r-box  .wish-num{
+  font-size:30rpx;
+  margin-top:10rpx;
+}
+.content .t-text{
+  color:#bdbdbd;
+  font-size:36rpx;
+}
+.rat-wrap .nums{
+  display:none;
+}
+.rat-wrap{
+  text-align:center;
+  display: block;
+  margin-top:0;
+  line-height:30rpx;
+}
+.rat-wrap .start{
+  display:inline-block !important;
+  top:0;
+}
+.like-btn{
+  padding:50rpx 0;
+  text-align:center;
+}
+.like-btn text{
+  display:inline-block;
+  margin:0 50rpx;
+  width:200rpx;
+  height:80rpx;
+  line-height:80rpx;
+  text-align:center;
+  border:1px solid #e24b5f;
+  border-radius:3px;
+  color:#e24b5f;
+}
+.comm{
+
+}
+.c-tit{
+  font-weight:700;
+  color:#bdbdbd;
+  margin-bottom:20rpx;
+}
+.comm .c-con{
+  height:100rpx;
+  overflow: hidden;
+  line-height:50rpx;
+  font-size:36rpx;
+  transition:all ease 0.2s;
+}
+.comm .c-con.active{
+  height:auto;
+}
+.comm .show-btn{
+  display:inline-block;
+  padding:20rpx 30rpx;
+  color:#33cca6;
+  position:relative;
+  left:-30rpx;
+}
+.comm .show-btn.active{
+  display:none;
+}
+.casts{
+  margin-top:30rpx;
+  display:flex;
+  flex-direction: column;
+}
+.casts .scrs{
+  width:100%;
+  white-space: nowrap;
+}
+.casts .scrs .items{
+  display:inline-block;
+  margin-right:20rpx;
+}
+.casts .scrs .items:last-child{
+  margin:0;
+}
+.casts .scrs .items image{
+  width:240rpx;
+  height:360rpx;
+}
+.casts .scrs .items .name{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width:240rpx;
+  text-align:center;
+  font-size:36rpx;
+}

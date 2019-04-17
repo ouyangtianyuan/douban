@@ -1,0 +1,26 @@
+<!--pages/more/index.wxml-->
+<import src='/pages/moviesList/index.wxml' />
+<view class='container'>
+    <view class='tab'>
+        <text class='tab-name {{showInTh}}' bindtap='tabFn' data-type='inTh'>正在热映</text>
+        <text class='tab-name {{showCom}}' bindtap='tabFn' data-type='com'>即将热映</text>
+    </view>
+    <view class='content'>
+        <view class='wrap'>
+            <block wx:if='{{showInTh}}'>
+                <scroll-view scroll-y class='scrolls' bindscrolltolower='loadmore'>
+                    <block wx:for='{{inTh.movies}}' wx:key='{{item}}'>
+                        <template is='moviesList' data='{{...item}}'></template>
+                    </block>
+                </scroll-view>
+            </block>
+            <block wx:if='{{showCom}}'>
+                <scroll-view scroll-y class='scrolls' bindscrolltolower='loadmore'>
+                    <block wx:for='{{com.movies}}' wx:key='{{item}}'>
+                        <template is='moviesList' data='{{...item}}'></template>
+                    </block>
+                </scroll-view>
+            </block>
+        </view>
+    </view>
+</view>

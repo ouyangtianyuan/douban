@@ -1,0 +1,62 @@
+/* pages/moviesList/index.wxss */
+.list-content{
+  background:#fff;
+  border-top:1px solid #eeeeee;
+  padding:30rpx;
+  display:flex;
+  position:relative;
+}  
+.list-content .imgs{
+  margin-right:30rpx;
+}
+.list-content .imgs image{
+  width:240rpx;
+  height:360rpx;
+  display:block;
+}
+.list-content .text-box{
+    flex:1;
+}
+.list-content .text-box .title{
+  font-weight:600;
+  margin-bottom:20rpx;
+  width:300rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list-content .text-box .allDir,
+.list-content .text-box .allCasts{
+  color:#bdbdbd;
+  font-size:36rpx;
+  width:400rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list-content .text-box .genres{
+  font-size:36rpx;
+  color:#bdbdbd;
+  margin-top:15rpx;
+  width:400rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list-content .text-box .wish{
+  margin-top:15rpx;
+   font-size:36rpx;
+   color:#33cca6;
+}
+.rig-btn text{
+  padding:0 20rpx;
+  height:60rpx;
+  line-height:60rpx;
+  border:1px solid #e24b5f;
+  color:#e24b5f;
+  font-size:36rpx;
+  border-radius:6rpx; 
+  position:absolute;
+  right:30rpx;
+  top:30rpx;
+}

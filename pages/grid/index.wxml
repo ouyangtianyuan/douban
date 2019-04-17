@@ -1,0 +1,16 @@
+<!--pages/grid/index.wxml-->
+<import src='/pages/rating/index.wxml'/>
+<template name='grid'>
+  <view class='wrap'>
+    <view class='content' bindtap='bindDetail' data-id='{{id}}'>
+      <view class='imgs-box'>
+        <image src='{{images. medium}}'></image>
+      </view>
+      <view class='title'>
+        <text>{{title}}</text>
+      </view>
+      <template is='rating' data='{{rating}}'></template>
+      <view class='wish'>{{collect_count}}人想看</view>
+    </view>
+  </view>
+</template>

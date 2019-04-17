@@ -1,0 +1,46 @@
+<!--pages/detail/index.wxml-->
+<import src='/pages/rating/index.wxml' />
+<view class='container'>
+  <view class='header'>
+    <image src='{{detail.movies.images.large}}'></image>
+  </view>
+  <view class='content'>
+    <view class='top'>
+      <view class='l-box'>
+        <view class='tit'>{{detail.movies.title}}</view>
+        <view class='t-text'>
+          <view class='genres'>{{detail.genres}}</view>
+          <view class='old-name'>原名：{{detail.movies.original_title}}</view>
+          <view class='old-name'>国家：{{detail.countries}}</view>
+        </view>
+      </view>
+      <view class='r-box'>
+        <view class='rat-num'>{{detail.movies.rating.average}}</view>
+        <template is='rating' data='{{rating}}'></template>
+        <view class='wish-num'>{{detail.movies.wish_count}}</view>
+      </view>
+    </view>
+    <view class='like-btn'>
+      <text>想看</text>
+      <text>看过</text>
+    </view>
+    <view class='comm'>
+      <view class='c-tit'>简介</view>
+      <view class='c-con {{active}}'>{{detail.movies.summary}}</view>
+      <text class='show-btn' bindtap='toggle' data-type='{{types}}'>{{showText}}</text>
+    </view>
+    <view class='casts'>
+      <view class='c-tit'>演员</view>
+      <scroll-view scroll-x='true' class='scrs'>
+        <block wx:for='{{detail.casts}}' wx:key='{{item}}'>
+          <view class='items'>
+            <view class='img-box'>
+              <image src='{{item.avatars.medium}}'></image>
+            </view>
+            <view class='name'>{{item.name}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

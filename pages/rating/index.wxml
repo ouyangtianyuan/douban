@@ -1,0 +1,7 @@
+<!--pages/rating/index.wxml-->
+<template name='rating'>
+  <view class='rat-wrap'>
+      <view class='start allstart{{rating.average || 0}}'></view>
+      <view class='nums'>{{rating.average}}分</view>
+  </view>
+</template>

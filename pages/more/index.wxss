@@ -1,0 +1,30 @@
+/* pages/more/index.wxss */
+@import '/pages/rating/index.wxss';
+@import '/pages/moviesList/index.wxss';
+.tab{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  background:#fff;
+  z-index: 1000;
+}
+.tab .tab-name{
+  flex:1;
+  font-weight:500;
+  text-align:center;
+  line-height:100rpx;
+  height:100rpx;
+  border-bottom:1px solid #eeee;
+  transition:all ease 0.2s;
+}
+.tab .tab-name.true{
+  border-bottom-color:#33cca6;
+  color:#33cca6;
+}
+
+.scrolls{
+  height:100vh;
+}
